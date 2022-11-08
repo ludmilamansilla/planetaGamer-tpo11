@@ -1,0 +1,349 @@
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400;600&family=Nova+Cut&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:wght@100&family=Silkscreen&family=Source+Serif+Pro:wght@200;400;700&display=swap');
+
+/* CSS GENERAL */
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Domine', serif;
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(120,9,121,1) 35%, rgba(0,212,255,1) 100%);
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/clouds-futuristic-neon-stars-digital-art-1841985-wallhere.com.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+/* NAVIGATION */
+
+nav {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 20px;
+}
+
+.bar-btn {
+    font-size: 25px;
+    color: #000;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu {
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0,0,0,.95);
+    text-align: center;
+    transition: all .5s;
+}
+
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px;
+    transition: all .5s;
+}
+
+.nav-menu li a {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.nav-menu li a.active, .nav-menu li a:hover {
+    color: rgb(231, 96, 255);
+    transition: .3s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked ~ .nav-menu {
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display: block;
+}
+
+/* TEXTO DEL BANNER */
+
+.banner-text {
+    padding: 0 30px;
+    margin-top:  150px;
+    text-align: center;
+    color: #000;
+}
+
+.banner-text h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner-text span {
+    color: rgb(161, 57, 175);
+}
+
+.banner-text h2 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.button1 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: rgb(161, 57, 175);
+    color: #000;
+    border-radius: 5px;
+}
+
+.button1:hover {
+    background-color: #000;
+    color: rgb(161, 57, 175);
+    transition: .5s;
+}
+
+.button2 {
+    margin-right: 40px;
+    padding: 10px 30px;
+    background-color: #000;
+    color: rgb(161, 57, 175);
+    border-radius: 5px;
+}
+
+.button2:hover {
+    background-color: rgb(161, 57, 175);
+    color: #000;
+    transition: .5s;
+}
+
+@media screen and (min-width: 768px) {
+    
+    .logo {
+        margin-left: 50px;
+    }
+    
+    nav {
+        height: 100px;
+    }
+
+    .bar-btn {
+        display: none;
+    }
+
+    .nav-menu {
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a {
+        font-size: 12px;
+        color: #000;
+    }
+
+    .banner-text h1 {
+        font-size: 70px;
+        margin-bottom: 30px;
+    }
+
+    .banner-text h2 {
+        font-size: 20px;
+    }
+
+}
+
+/* CARDS GAMES */
+
+.section-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); 
+    grid-gap: 1rem;
+    justify-items: center;
+}
+
+.card {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px #000;
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: rgb(18, 1, 255);
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+}
+
+.card .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card .back .link a {
+    color: purple;
+}
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+
+.card .back p {
+    letter-spacing: 1px;
+    padding: 30px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/* BANNER 1 */
+
+.cards-banner1 {
+    width: 100%;
+    height: 350px;
+    background: url('/images/banner.jpg');
+    margin-bottom: 40px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.cards-banner1 .content {
+    width: 100%;
+    padding: 90px 0 0 30px;
+}
+
+.cards-banner1 p, .cards-banner1 h2 {
+    margin: 10px 0 20px 0;
+}
+
+/* FOOTER LINKS */
+
+.footer-links {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 35px 0;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.footer-container ul {
+    margin: 0 auto
+}
+
+.footer-container ul li {
+    line-height: 1.8;
+}
+
+.footer {
+    background: #2f3640;
+    color: #616161;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+
+    .card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cards-banner1 .content {
+        width: 80%;
+    }
+
+    .footer-links .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
