@@ -2,7 +2,7 @@
 
 ------------
 
-                                                                    ### PLANETA GAMER 
+### PLANETA GAMER 
 
 ###### Un mundo para fanaticos de los videojuegos, donde todavia se estan desarrollando mejoras, para que haya foros, novedades actualizadas a ultimo momento, información y **¡super datos!**
 
