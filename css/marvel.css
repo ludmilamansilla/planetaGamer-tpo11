@@ -1,0 +1,17 @@
+body {
+    background: rgb(201, 65, 65);
+}
+
+.navbar-brand, a, img{
+    width: 30%;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+
+img.img-thumbnail {
+    width: 80%;
+    height: 80%;
+}
